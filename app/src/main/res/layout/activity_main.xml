@@ -23,22 +23,24 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="708dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/grid"
         android:scrollbarSize="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/grid" />
 
     <LinearLayout
-        android:layout_width="398dp"
-        android:layout_height="408dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="342dp"
+        android:layout_height="343dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/status"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView">
 
@@ -68,7 +70,6 @@
                 android:onClick="TapTap"
                 android:padding="20sp"
                 android:tag="1" />
-
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -167,13 +168,14 @@
         android:id="@+id/status"
         android:layout_width="336dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="32dp"
         android:text="X's Turn - Tap to Play."
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
